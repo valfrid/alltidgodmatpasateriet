@@ -1,6 +1,7 @@
 ---
 title: "Svampsoppa med tryffel & ingefärsolja"
 subtitle: "Nobelmiddagen 2025 · Förrätt"
+category: "Förrätter"
 portions: 5
 time_minutes: 180
 complexity: "Avancerad"
