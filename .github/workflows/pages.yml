@@ -4,7 +4,10 @@ on:
   push:
     branches: [main]
     paths:
+      - 'recipes/**'
       - 'site/**'
+      - 'scripts/**'
+      - 'RECIPE_FORMAT.md'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -26,12 +29,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install site generator dependencies
+        run: pip install markdown pyyaml
+
+      - name: Build site from recipe markdown
+        run: python scripts/build_site.py
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload site
+
+      - name: Upload generated site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: dist
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
