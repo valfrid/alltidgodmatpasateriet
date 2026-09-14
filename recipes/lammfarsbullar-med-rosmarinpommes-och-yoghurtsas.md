@@ -1,5 +1,6 @@
 ---
 title: "Lammfärsbullar med rosmarinpommes och yoghurtsås"
+category: "Huvudrätter"
 portions: 4
 time_minutes: 45
 source: "Stefan Ekengren, Köket middag / TV4"
