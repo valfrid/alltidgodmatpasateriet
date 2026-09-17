@@ -5,29 +5,28 @@ source: "Gabriel Valfridsson"
 source_type: "family"
 tried: true
 contributor: "Gabriel Valfridsson"
+pizza_calculator: true
 ---
 
 # Gabriels Pizza
 
-Husets pizzabagare Gabriel Valfridssons pizzadeg med poolish. Grunddegen har 70 % hydrering och 4 % salt. Gabriels arbetssätt är praktiskt: gör en lagom stor poolish dagen före och bestäm sedan hur många pizzor det faktiskt ska bli när slutdegen blandas.
+En pizzadeg med poolish, 70 % hydrering och 4 % salt. Gör poolish dagen före och bestäm sedan hur många pizzor det faktiskt ska bli när slutdegen blandas.
 
-## Ingredienser
+## Poolish – dagen före
 
-### Poolish – dagen före
-
-Poolishen görs med lika delar vatten och Caputo Pizzeria-mjöl. Gabriel använder 5 g jäst även till de mindre, normala degmängderna – jästen skalas alltså inte linjärt på samma sätt som mjöl och vatten.
+Blanda lika delar vatten och Caputo Pizzeria-mjöl med **5 g jäst**. Jästen behöver inte skalas linjärt för normala hemmamängder.
 
 | Poolish | Vatten | Caputo Pizzeria-mjöl | Jäst |
 |---|---:|---:|---:|
 | Liten | 300 g | 300 g | 5 g |
 | Mellan | 400 g | 400 g | 5 g |
-| Gabriels vanliga | 500 g | 500 g | 5 g |
+| Stor | 500 g | 500 g | 5 g |
 
-Poolishen kan jäsa betydligt mer i rumstemperatur än man kanske tror. Gabriel låter den ibland stå framme hela natten; hur länge beror på rumstemperaturen.
+Poolishen kan jäsa länge i rumstemperatur, ibland hela natten. Hur länge beror på temperaturen i rummet.
 
-### Gabriels grundsats från originalarket
+## En stor sats
 
-För cirka 10 pizzor:
+För ungefär 10 pizzor:
 
 **Poolish**
 
@@ -42,30 +41,19 @@ För cirka 10 pizzor:
 - 60 g salt
 - 1 000 g Caputo Pizzeria-mjöl
 
-Originalarket anger 10 degar à 250 g. Ingrediensmängderna ger dock totalt cirka 2 615 g deg, så degbollarna blir i praktiken ungefär 250–260 g beroende på hur de delas.
-
 ## Gör så här
 
-1. Blanda lika delar vatten och Caputo Pizzeria-mjöl med 5 g jäst till poolishen dagen före.
-2. Låt poolishen jäsa. Den kan stå länge i rumstemperatur och ibland hela natten, beroende på temperaturen i rummet.
-3. Nästa dag bestämmer du hur många pizzor du vill göra. Gabriel är inte särskilt noga med hur stor andel av slutdegen som består av poolish; han gör ofta 500 + 500 g och listar ut slutmängden deg dagen efter. Vet han att det bara blir några få pizzor gör han exempelvis 300 + 300 g eller 400 + 400 g.
-4. Blanda poolishen med resterande vatten, mjöl och salt och knåda degen ordentligt. Gabriel ser inget behov av att tillsätta vattnet i två steg.
-5. Degen behöver inte jäsa som en hel deg efter knådningen. Den kan däremot få vila en kort stund och sedan knådas igen för att få en bättre deg.
-6. Dela och bolla degen direkt. Lägg varje degboll i en egen burk.
-7. Låt degbollarna jäsa i rumstemperatur fram till pizzabakningen samma kväll.
-8. Vill du dra ut på jäsningen eller nästan stoppa den kan degbollarna ställas i kylskåp senare under jäsningen. Längst in vid den kalla väggen, gärna med redan kalla saker framför, kan jäsningen bromsas kraftigt och degarna kan enligt Gabriel lämnas så i några dagar.
-9. Degens temperatur vid utbakning kan användas för att justera hur lätt den är att baka ut. En varmare deg blir mjukare och mer följsam, medan en kallare deg är fastare.
+1. Blanda poolishen dagen före och låt den jäsa.
+2. Nästa dag bestämmer du hur många pizzor du vill göra. Poolishens andel av slutdegen behöver inte vara exakt – gör en praktisk mängd dagen före och komplettera till rätt slutmängd nästa dag.
+3. Blanda poolishen med det vatten, mjöl och salt som återstår och knåda degen ordentligt. Vattnet behöver inte tillsättas i två steg.
+4. Låt gärna degen vila en kort stund och knåda den sedan igen för att bygga en bra degstruktur.
+5. Dela och bolla degen direkt. Lägg varje degboll i en egen burk.
+6. Låt degbollarna jäsa i rumstemperatur fram till pizzabakningen samma kväll.
+7. Vill du dra ut på jäsningen kan degbollarna ställas i kylskåp senare under jäsningen. Kallt placerade kan de sparas i några dagar.
+8. Degens temperatur vid utbakning påverkar känslan: en varmare deg blir mjukare och mer följsam, medan en kallare deg är fastare.
 
-## Bagarns proportioner
+## Degkalkylator
 
-Grundprincipen i originalarket är:
+På webbsidan finns en degkalkylator för receptet. Välj antal pizzor, vikt per degboll och hur stor poolish du redan har gjort. Kalkylatorn räknar ut hur mycket mjöl, vatten och salt som ska tillsättas nästa dag.
 
-- 70 % vatten räknat på den totala mjölmängden
-- 4 % salt räknat på den totala mjölmängden
-- cirka 250 g deg per pizza
-
-Poolishens storlek är däremot flexibel. Det är en del av Gabriels metod: **gör poolish idag – bestäm hur många som kommer på pizza imorgon.**
-
-## Anteckning
-
-Recept och metod från Gabriel Valfridsson, husets pizzabagare. Receptet bygger på Gabriels kalkylark och hans egna kommentarer om hur han arbetar med poolish, knådning, bollning, rumstemperatur och kylförvaring.
+Grundproportionerna är **70 % vatten** och **4 % salt**, räknat på den totala mjölmängden. Poolishen består av lika delar mjöl och vatten.
