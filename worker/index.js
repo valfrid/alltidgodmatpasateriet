@@ -45,6 +45,13 @@ export default {
     }
 
     if (request.method === "POST" && url.pathname === "/recipe") {
+      if (!env.RECIPE_API_KEY) return json({ error: "RECIPE_API_KEY is not configured" }, 500);
+
+      const auth = request.headers.get("authorization") || "";
+      if (auth !== "Bearer " + env.RECIPE_API_KEY) {
+        return json({ error: "Unauthorized" }, 401);
+      }
+
       if (!env.GITHUB_TOKEN) return json({ error: "GITHUB_TOKEN is not configured" }, 500);
 
       let body;
