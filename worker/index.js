@@ -95,6 +95,29 @@ async function createRecipe(env, requestedName, content) {
   return { ok: true, path, commit: result.commit?.sha };
 }
 
+async function deleteRecipe(env, requestedName) {
+  const current = await getRecipe(env, requestedName);
+  const deleted = await github("/contents/" + encodeURIComponent(current.path), {
+    method: "DELETE",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      message: "Delete recipe " + current.filename + " via MCP",
+      sha: current.sha,
+      branch: BRANCH,
+    }),
+  }, env.GITHUB_TOKEN);
+  const result = await deleted.json().catch(() => ({}));
+  if (!deleted.ok) throw new Error("GitHub delete failed: " + (result.message || deleted.status));
+  return { ok: true, path: current.path, commit: result.commit?.sha };
+}
+
+async function getRecipeSkill(env) {
+  const response = await github("/contents/RECIPE_SKILL.md?ref=" + BRANCH, { method: "GET" }, env.GITHUB_TOKEN);
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error("GitHub skill read failed: " + response.status);
+  return decodeBase64Utf8(data.content || "");
+}
+
 async function updateRecipe(env, requestedName, content) {
   const current = await getRecipe(env, requestedName);
   if (typeof content !== "string" || !content.trim()) throw new Error("Content must not be empty");
@@ -114,7 +137,10 @@ async function updateRecipe(env, requestedName, content) {
 }
 
 function createServer(env) {
-  const server = new McpServer({ name: "Alltid God Mat pa Sateriet", version: "1.2.0" });
+  const server = new McpServer(
+    { name: "Alltid God Mat pa Sateriet", version: "1.3.0" },
+    { instructions: "Use the recipe skill for recipe ingestion and editing guidance. Read it with get_recipe_skill when creating or substantially editing a recipe. Before destructive actions, identify the exact recipe first." }
+  );
 
   server.registerTool("list_recipes", {
     description: "List all published recipes in Alltid God Mat pa Sateriet.",
@@ -133,6 +159,18 @@ function createServer(env) {
       content: z.string().describe("Complete recipe in Markdown"),
     },
   }, async ({ filename, content }) => toolText(await createRecipe(env, filename, content)));
+
+  server.registerTool("get_recipe_skill", {
+    description: "Read the current recipe-ingestion skill instructions maintained with the recipe repository.",
+    inputSchema: {},
+  }, async () => toolText(await getRecipeSkill(env)));
+
+  server.registerTool("delete_recipe", {
+    description: "Delete an existing recipe Markdown file. This is destructive; identify the exact recipe before calling it.",
+    inputSchema: {
+      filename: z.string().describe("Existing recipe filename or slug"),
+    },
+  }, async ({ filename }) => toolText(await deleteRecipe(env, filename)));
 
   server.registerTool("update_recipe", {
     description: "Replace the Markdown content of an existing recipe while keeping the same filename.",
