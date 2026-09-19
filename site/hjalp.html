@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hjälp – ChatGPT · Alltid bra mat på Säteriet</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="mobile-top">
+  <a class="iconbtn" href="index.html" aria-label="Tillbaka">‹<span>Tillbaka</span></a>
+  <div class="brand"><strong>Alltid bra mat på Säteriet</strong><em>Hjälp &amp; ChatGPT</em></div>
+  <a class="iconbtn" href="index.html" aria-label="Hem">⌂<span>Hem</span></a>
+</nav>
+<main class="help-page">
+<article class="help-content">
+<p class="eyebrow">HJÄLP</p>
+<h1>Använd receptsamlingen i ChatGPT</h1>
+<p class="help-lead">Med vår egen ChatGPT-plugin kan du fråga efter recept, läsa dem, arbeta fram nya recept och – när du uttryckligen ber om det – publicera, uppdatera eller ta bort recept i samlingen.</p>
+
+<div class="help-note"><strong>Webbsidan finns alltid här:</strong> <a href="https://mat.valfrid.win">mat.valfrid.win</a></div>
+
+<h2>Installera som Custom Plugin</h2>
+<ol class="help-steps">
+<li><strong>Öppna Settings i ChatGPT.</strong><br>Öppna kontomenyn och välj <em>Settings</em>.</li>
+<li><strong>Slå på Developer mode.</strong><br>Gå till <em>Security and login</em> → <em>Advanced security</em> och aktivera <em>Developer mode</em>. ChatGPT visar en varning eftersom egna MCP-servrar kan göra ändringar i externa system.</li>
+<li><strong>Öppna Plugins.</strong><br>Gå till Plugins och tryck på <strong>+</strong> för att lägga till en egen plugin.</li>
+<li><strong>Skapa pluginen.</strong><br>Ange exempelvis namnet <strong>Alltid God Mat på Säteriet</strong>. Som Server URL använder du:<div class="server-url">https://alltidgodmatpasateriet.lars-258.workers.dev/mcp-v2</div>Välj <strong>No Auth</strong>, markera att du förstår riskinformationen och tryck <strong>Create</strong>.</li>
+<li><strong>Prova i en chatt.</strong><br>Aktivera <em>Alltid God Mat på Säteriet</em> i chatten och fråga till exempel: “Vilka recept har vi?” eller “Visa Gabriels pizza”.</li>
+</ol>
+
+<h2>Vad kan jag be ChatGPT göra?</h2>
+<div class="help-examples">
+<p><strong>Hitta:</strong> “Vilka recept har vi?”</p>
+<p><strong>Läsa:</strong> “Visa hela receptet på Gabriels pizza.”</p>
+<p><strong>Skapa:</strong> “Hjälp mig göra ett recept av det här.”</p>
+<p><strong>Publicera:</strong> “Lägg upp receptet.”</p>
+<p><strong>Ändra:</strong> “Uppdatera receptet med den här kommentaren.”</p>
+<p><strong>Ta bort:</strong> “Ta bort receptet …” – ChatGPT behandlar detta som en destruktiv åtgärd.</p>
+<p><strong>Hjälp:</strong> “Hur fungerar Alltid God Mat på Säteriet?”</p>
+</div>
+
+<h2>Så fungerar det</h2>
+<p>ChatGPT pratar med receptsamlingen via vår MCP-server. Recepten lagras i projektets GitHub-repository och den publicerade kokboken byggs automatiskt till <a href="https://mat.valfrid.win">mat.valfrid.win</a>. Pluginen har också tillgång till receptsamlingens Skill-instruktioner, så att nya och ändrade recept hanteras på samma sätt.</p>
+<div class="help-warning"><strong>Viktigt:</strong> MCP-servern är för närvarande installerad med <em>No Auth</em>. Dela därför installationsadressen bara med personer som ska kunna arbeta med receptsamlingen.</div>
+
+<p class="help-back"><a href="index.html">← Tillbaka till recepten</a></p>
+</article>
+</main>
+<footer><img class="footer-key" src="assets/key.png" alt="Alltid bra mat på Säteriet"><p>Säteriet · anno 1860 · en levande receptsamling</p></footer>
+</body></html>
