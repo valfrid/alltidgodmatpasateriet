@@ -42,3 +42,5 @@ footer .footer-key{width:140px;max-width:38vw;height:auto;border-radius:0;displa
   .help-steps{padding-left:1.35rem}
   .help-steps li{padding-left:.15rem}
 }
+
+.help-shot{margin:1rem 0 1.6rem}.help-shot img{display:block;width:100%;max-width:520px;height:auto;margin:.7rem auto;border:1px solid var(--line);border-radius:12px;box-shadow:0 5px 16px rgba(73,54,29,.12)}.help-shot figcaption{text-align:center;color:var(--muted);font:italic .9rem 'Cormorant Garamond',serif}
