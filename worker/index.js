@@ -138,9 +138,33 @@ async function updateRecipe(env, requestedName, content) {
 
 function createServer(env) {
   const server = new McpServer(
-    { name: "Alltid God Mat pa Sateriet", version: "1.3.0" },
+    { name: "Alltid God Mat pa Sateriet", version: "1.4.0" },
     { instructions: "Use the recipe skill for recipe ingestion and editing guidance. Read it with get_recipe_skill when creating or substantially editing a recipe. Before destructive actions, identify the exact recipe first." }
   );
+
+  server.registerTool("info", {
+    description: "Explain what Alltid God Mat pa Sateriet is, how to use the recipe tools, and where to browse the published recipe website.",
+    inputSchema: {},
+  }, async () => toolText({
+    name: "Alltid God Mat på Säteriet",
+    website: "https://mat.valfrid.win",
+    description: "Familjens receptsamling på Säteriet.",
+    how_it_works: [
+      "Du kan lista och läsa publicerade recept.",
+      "Du kan arbeta fram ett nytt recept i chatten och publicera det när du uttryckligen ber om det.",
+      "Du kan uppdatera ett befintligt recept.",
+      "Du kan radera ett recept när du uttryckligen ber om det; radering är en destruktiv åtgärd.",
+      "Vid skapande eller större redigering finns get_recipe_skill med de aktuella instruktionerna för hur recepten ska hanteras."
+    ],
+    examples: [
+      "Vilka recept finns?",
+      "Visa Gabriels pizza.",
+      "Hjälp mig skriva ett nytt recept.",
+      "Lägg upp receptet.",
+      "Uppdatera receptet.",
+      "Ta bort receptet."
+    ]
+  }));
 
   server.registerTool("list_recipes", {
     description: "List all published recipes in Alltid God Mat pa Sateriet.",
