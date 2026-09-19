@@ -113,7 +113,7 @@ async function updateRecipe(env, requestedName, content) {
   return { ok: true, path: current.path, commit: result.commit?.sha };
 }
 
-function createServer(env) {
+function createServer(env, allowWrites = false) {
   const server = new McpServer({ name: "Alltid God Mat pa Sateriet", version: "1.0.0" });
 
   server.registerTool("list_recipes", {
@@ -126,21 +126,24 @@ function createServer(env) {
     inputSchema: { filename: z.string().describe("Recipe filename or slug, with or without .md") },
   }, async ({ filename }) => toolText(await getRecipe(env, filename)));
 
-  server.registerTool("create_recipe", {
-    description: "Publish a new recipe Markdown file. Fails if the recipe already exists.",
-    inputSchema: {
-      filename: z.string().describe("Lowercase recipe slug, for example kanelbullar.md"),
-      content: z.string().describe("Complete recipe in Markdown"),
-    },
-  }, async ({ filename, content }) => toolText(await createRecipe(env, filename, content)));
+  // Write tools are only exposed to authenticated MCP clients.
+  if (allowWrites) {
+    server.registerTool("create_recipe", {
+      description: "Publish a new recipe Markdown file. Fails if the recipe already exists.",
+      inputSchema: {
+        filename: z.string().describe("Lowercase recipe slug, for example kanelbullar.md"),
+        content: z.string().describe("Complete recipe in Markdown"),
+      },
+    }, async ({ filename, content }) => toolText(await createRecipe(env, filename, content)));
 
-  server.registerTool("update_recipe", {
-    description: "Replace the Markdown content of an existing recipe while keeping the same filename.",
-    inputSchema: {
-      filename: z.string().describe("Existing recipe filename or slug"),
-      content: z.string().describe("Complete replacement recipe in Markdown"),
-    },
-  }, async ({ filename, content }) => toolText(await updateRecipe(env, filename, content)));
+    server.registerTool("update_recipe", {
+      description: "Replace the Markdown content of an existing recipe while keeping the same filename.",
+      inputSchema: {
+        filename: z.string().describe("Existing recipe filename or slug"),
+        content: z.string().describe("Complete replacement recipe in Markdown"),
+      },
+    }, async ({ filename, content }) => toolText(await updateRecipe(env, filename, content)));
+  }
 
   return server;
 }
@@ -158,8 +161,8 @@ export default {
 
     if (url.pathname === "/mcp") {
       if (!env.GITHUB_TOKEN) return json({ error: "GITHUB_TOKEN is not configured" }, 500);
-      if (!hasValidApiKey(request, env)) return json({ error: "Unauthorized" }, 401);
-      return createMcpHandler(() => createServer(env), { route: "/mcp" })(request, env, ctx);
+      const allowWrites = hasValidApiKey(request, env);
+      return createMcpHandler(() => createServer(env, allowWrites), { route: "/mcp" })(request, env, ctx);
     }
 
     if (request.method === "GET" && url.pathname === "/") {
