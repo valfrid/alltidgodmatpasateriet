@@ -188,9 +188,10 @@ export default {
     const url = new URL(request.url);
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: json({}).headers });
 
-    if (url.pathname === "/mcp") {
+    if (url.pathname === "/mcp" || url.pathname === "/mcp-v2") {
       if (!env.GITHUB_TOKEN) return json({ error: "GITHUB_TOKEN is not configured" }, 500);
-      return createMcpHandler(() => createServer(env), { route: "/mcp" })(request, env, ctx);
+      const mcpRoute = url.pathname;
+      return createMcpHandler(() => createServer(env), { route: mcpRoute })(request, env, ctx);
     }
 
     if (request.method === "GET" && url.pathname === "/") {
