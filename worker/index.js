@@ -114,7 +114,7 @@ async function updateRecipe(env, requestedName, content) {
 }
 
 function createServer(env) {
-  const server = new McpServer({ name: "Alltid God Mat pa Sateriet", version: "1.1.0" });
+  const server = new McpServer({ name: "Alltid God Mat pa Sateriet", version: "1.2.0" });
 
   server.registerTool("list_recipes", {
     description: "List all published recipes in Alltid God Mat pa Sateriet.",
