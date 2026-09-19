@@ -1,6 +1,11 @@
 {
   "name": "alltidgodmatpasateriet-api",
   "private": true,
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.0.0",
+    "agents": "^0.20.0",
+    "zod": "^4.0.0"
+  },
   "devDependencies": {
     "wrangler": "^4.0.0"
   },
