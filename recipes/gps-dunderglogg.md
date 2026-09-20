@@ -33,9 +33,13 @@ Den klassiska dunderglöggen på svagdricka. Den får jäsa i lugn och ro i någ
 
 ## Säteriets anteckning
 
-Har man en garderob kan hinken stå där och bubbla ett antal veckor.
+När vi för många år sedan rev våra platsbyggda 1960-talsgarderober fällde Gabriel kommentaren:
 
-Väl buteljerad blir glöggen bättre för vart år. Den mognar fint i vinhyllan.
+> ”…var skall vi nu brygga glöggen…”
+
+Garderoberna hade nämligen varit den självklara platsen där glöggen fick stå och bubbla.
+
+Den sista lagrade flaskan, minst 10 år gammal, är nu uppdrucken. Glöggen mognar fint på flaska, så nu måste en ny omgång planeras.
 
 ## Källa
 
