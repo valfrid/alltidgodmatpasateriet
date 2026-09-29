@@ -26,6 +26,8 @@
   .recipe-markdown h2+*,.recipe-markdown h3+*{break-before:avoid;page-break-before:avoid}
   .recipe-markdown p{orphans:3;widows:3}
   .recipe-markdown li,.recipe-markdown tr{break-inside:avoid;page-break-inside:avoid}
+  .recipe-markdown ul:not(:has(> li:nth-child(10))),.recipe-markdown ol:not(:has(> li:nth-child(10))){break-inside:avoid;page-break-inside:avoid}
+  .recipe-markdown ul>li:first-child,.recipe-markdown ol>li:first-child,.recipe-markdown ul>li:nth-last-child(2),.recipe-markdown ol>li:nth-last-child(2){break-after:avoid;page-break-after:avoid}
   .recipe-markdown thead{display:table-header-group}
   .recipe-markdown table{font-size:9pt;break-inside:auto;page-break-inside:auto}
   a{color:#000;text-decoration:none}
