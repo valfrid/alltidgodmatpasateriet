@@ -12,7 +12,24 @@
 .about{text-align:center;padding:2.8rem 1rem 4rem;background:#f3ead9;border-top:1px solid var(--line)}.ornament{color:var(--green);font-size:2rem}.about p{font:italic 1.7rem 'Cormorant Garamond',serif}footer{text-align:center;padding:2.2rem 1rem;background:#34422f;color:#eee4d2}footer img{width:140px;max-width:45vw;height:auto;border-radius:50%;display:block;margin:0 auto .8rem}footer p{font:500 1.05rem 'Cormorant Garamond',serif}
 @media(max-width:520px){.mobile-top{min-height:92px;grid-template-columns:58px 1fr 58px}.brand strong{font-size:1.22rem}.brand em{font-size:.76rem}.recipe-page{padding:1rem .65rem 3rem}.recipe-content{padding:3.7rem 1.15rem 2.4rem}.print-button{top:.9rem;right:.9rem}.print-button span{display:none}.recipe-content>h1{font-size:2.55rem}.calc-inputs{grid-template-columns:1fr}.pizza-calculator{padding:1.1rem}}
 @media(min-width:900px){.mobile-top{min-height:76px;grid-template-columns:90px 1fr 90px}.hero-plain{padding:5rem 2rem}.category-strip{grid-template-columns:repeat(6,1fr);max-width:1500px;margin:auto}.recipe-grid{grid-template-columns:repeat(2,1fr);max-width:1100px}}
-@media print{@page{margin:16mm 14mm}body{background:#fff;color:#000;font-family:Georgia,'Times New Roman',serif;font-size:10.5pt}.mobile-top,.print-button,footer,.pizza-calculator{display:none!important}.recipe-page{padding:0}.recipe-content{max-width:none;margin:0;padding:0;border:0;box-shadow:none;background:#fff}.recipe-content>h1{font-family:Georgia,serif;font-size:24pt}.recipe-markdown{max-width:none;margin:12pt 0 0}.recipe-markdown h2{font-family:Georgia,serif;font-size:16pt}.recipe-markdown table{font-size:9pt}a{color:#000;text-decoration:none}}
+@media print{
+  @page{margin:16mm 14mm}
+  body{background:#fff;color:#000;font-family:Georgia,'Times New Roman',serif;font-size:10.5pt}
+  .mobile-top,.print-button,footer,.pizza-calculator{display:none!important}
+  .recipe-page{padding:0}
+  .recipe-content{max-width:none;margin:0;padding:0;border:0;box-shadow:none;background:#fff}
+  .recipe-content>h1{font-family:Georgia,serif;font-size:24pt;break-after:avoid;page-break-after:avoid}
+  .recipe-facts,.source{break-inside:avoid;page-break-inside:avoid}
+  .recipe-markdown{max-width:none;margin:12pt 0 0}
+  .recipe-markdown h2,.recipe-markdown h3{font-family:Georgia,serif;break-after:avoid;page-break-after:avoid}
+  .recipe-markdown h2{font-size:16pt}
+  .recipe-markdown h2+*,.recipe-markdown h3+*{break-before:avoid;page-break-before:avoid}
+  .recipe-markdown p{orphans:3;widows:3}
+  .recipe-markdown li,.recipe-markdown tr{break-inside:avoid;page-break-inside:avoid}
+  .recipe-markdown thead{display:table-header-group}
+  .recipe-markdown table{font-size:9pt;break-inside:auto;page-break-inside:auto}
+  a{color:#000;text-decoration:none}
+}
 
 footer .footer-key{width:140px;max-width:38vw;height:auto;border-radius:0;display:block;margin:0 auto .8rem}
 
