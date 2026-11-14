@@ -6,8 +6,8 @@ time: "Över 60 minuter (minst 4 timmar i kyl)"
 source: "ICA, Buffé nr 9 (2022)"
 source_url: "https://www.ica.se/recept/lemon-posset-med-hallon-729405/"
 tried: true
-tried_date: "2026-09-14"
-occasion: "Fyrarättersmiddag på Säteriet med Bertil och Annika, 14 september 2026"
+tried_date: "2026-11-14"
+occasion: "Fyrarättersmiddag på Säteriet med Bertil och Annika, 14 november 2026"
 ---
 
 # Lemon posset med hallon
@@ -35,7 +35,7 @@ En len, frisk och krämig citrondessert som stelnar utan gelatin. Serveras i sm�
 
 ## Från Säteriets matbord
 
-Denna lemon posset blev den söta finalen på en fantastisk **fyrarättersmiddag på Säteriet den 14 september 2026**, med **Bertil och Annika** som gäster.
+Denna lemon posset blev den söta finalen på en fantastisk **fyrarättersmiddag på Säteriet den 14 november 2026**, med **Bertil och Annika** som gäster.
 
 ## Källa
 
